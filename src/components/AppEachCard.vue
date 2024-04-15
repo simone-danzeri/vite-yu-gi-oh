@@ -1,6 +1,9 @@
 <script>
     export default {
-        name: 'AppEachCard'
+        name: 'AppEachCard',
+        props: {
+            cardInfo: Object
+        }
     }
 </script>
 
@@ -8,17 +11,17 @@
 <template>
         <div class="single-card">
         <div class="image">
-            <img src="" alt="">
+            <img :src="cardInfo.card_images.image_url" alt="">
         </div>
 
-        <h2>[titolo]</h2>
-        <div>[Archetipo]</div>
+        <h2>{{ cardInfo.name }}</h2>
+        <div>{{ cardInfo.archetype }}</div>
     </div>
 </template>
 
 
 <style scoped lang="scss">
-.character-card {
+.single-card {
     width: calc((100% / 5) - 10px);
     text-align: center;
     margin: 10px 5px;

@@ -26,6 +26,7 @@ export default {
       .then((response) => {
         store.yugioh = response.data.data;
         console.log(store.yugioh);
+
       });
     }
   },
