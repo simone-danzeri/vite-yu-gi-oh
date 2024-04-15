@@ -11,7 +11,7 @@
 <template>
         <div class="single-card">
         <div class="image">
-            <img :src="cardInfo.card_images.image_url" alt="">
+            <img :src="cardInfo.card_images[0].image_url" alt="">
         </div>
 
         <h2>{{ cardInfo.name }}</h2>

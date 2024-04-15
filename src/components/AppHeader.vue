@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     padding: 20px 15px;
+    background-color: whitesmoke;
     
     h1{
         margin-left: 30px;

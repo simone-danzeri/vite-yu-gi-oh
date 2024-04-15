@@ -26,16 +26,15 @@ import { store } from '../store';
 
 <style scoped lang="scss">
 .bg-color{
-    background-color: chocolate;
+    margin-top: 50px;
 
     .card-container{
         width: 70%;
         margin: 0 auto;
-        background-color: aqua;
+        background-color: antiquewhite;
         display: flex;
         flex-wrap: wrap;
-        /* DEBUG */
-        height: 1500px;
+        padding: 20px 15px;
     }
 }
 </style>
