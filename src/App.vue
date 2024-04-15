@@ -2,10 +2,12 @@
 import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
+import AppCardList from './components/AppCardList.vue';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    AppCardList
   }
 }
 
@@ -15,7 +17,7 @@ export default {
 <AppHeader></AppHeader>
 
 <main>
-  
+<AppCardList></AppCardList>
 </main>
 </template>
 
