@@ -29,7 +29,7 @@ import { store} from '../store'
 
 <template>
     <div class="container">
-        <select>
+        <select v-model="store.searchedArchetype" @change="$emit('performedFilter')">
             <!-- Option di base -->
             <option value="">Scegli un archetipo</option>
             <!-- Option da scegliere -->
