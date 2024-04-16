@@ -14,16 +14,23 @@ export default {
   data() {
     return {
       store,
-      myParams: {
+/*       myParams: {
         num: 20,
         offset: 0
-      }
+      } */
     };
   },
   methods: {
     getYugiohInfoFromApi() {
+      const myParams = {
+        num: 20,
+        offset: 0
+      }
+      if(store.searchedArchetype !== '') {
+        myParams.archetype = store.searchedArchetype;
+      }
       axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
-        params: this.myParams
+        params: myParams
       })
       .then((response) => {
         store.yugioh = response.data.data;
@@ -41,7 +48,7 @@ export default {
   <AppHeader></AppHeader>
 
   <main>
-    <AppFilter></AppFilter>
+    <AppFilter @performedFilter="getYugiohInfoFromApi"></AppFilter>
     <AppCardList></AppCardList>
   </main>
 </template>
