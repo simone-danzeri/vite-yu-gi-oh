@@ -4,12 +4,14 @@ import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppFilter from './components/AppFilter.vue';
 import AppCardList from './components/AppCardList.vue';
+import AppResultsNumber from './components/AppResultsNumber.vue';
 
 export default {
   components: {
     AppHeader,
     AppFilter,
-    AppCardList
+    AppCardList,
+    AppResultsNumber
   },
   data() {
     return {
@@ -51,6 +53,7 @@ export default {
     <AppFilter @performedFilter="getYugiohInfoFromApi"></AppFilter>
     <AppCardList></AppCardList>
   </main>
+  <AppResultsNumber></AppResultsNumber>
 </template>
 
 <style lang="scss">
