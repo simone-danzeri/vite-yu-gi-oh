@@ -13,7 +13,10 @@
 
 <template>
     <div class="container">
-        <span>Ho trovato {{ store.yugioh.length }} carte con l'archetipo {{ store.searchedArchetype }}</span>
+        <span>Ho trovato {{ store.yugioh.length }} carte
+            <span v-if="store.searchedArchetype == ''">con qualsiasi archetipo</span>
+            <span v-else>con archetipo {{ store.searchedArchetype }}</span>
+        </span>
     </div>
 </template>
 
